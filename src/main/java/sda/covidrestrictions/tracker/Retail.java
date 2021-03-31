@@ -20,13 +20,13 @@ public class Retail {
     public static void getProductsList() {
       
         List<String> allowedProducts = new ArrayList<>();
-        allowedProducts.add("food");
-        allowedProducts.add("pharmacy");
-        allowedProducts.add("animal products");
-        allowedProducts.add("animal1 products");
-        allowedProducts.add("animal2 products");
-        allowedProducts.add("animal3 products");
-        allowedProducts.add("animal4 products");
+        allowedProducts.add("Food");
+        allowedProducts.add("Pharmacy");
+        allowedProducts.add("Animal products");
+        allowedProducts.add("Gasoline services");
+        allowedProducts.add("Hygienic products");
+        allowedProducts.add("products");
+        allowedProducts.add("products1");
         allowedProducts.add("animal5 products");
         allowedProducts.add("animal6 products");
         allowedProducts.add("animal7 products");
