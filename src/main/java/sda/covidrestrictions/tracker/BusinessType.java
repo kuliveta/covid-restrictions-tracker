@@ -30,7 +30,7 @@ public class BusinessType {
         return corporateBusinessType.get(businessIndex);
     }
 
-   
+
 
 }
 

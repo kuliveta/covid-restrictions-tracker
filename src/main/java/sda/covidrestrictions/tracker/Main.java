@@ -15,7 +15,7 @@ public class Main<numberOfTypeOfBusiness> {
 
         BusinessType.getBusinessType(corporateBusinessType);
 
-
+        BusinessType.chooseBusinessType(1,corporateBusinessType);
 
 
         Retail.messageToCustomer();
