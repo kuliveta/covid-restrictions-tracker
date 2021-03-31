@@ -26,7 +26,7 @@ public class Retail {
         allowedProducts.add("Gasoline services");
         allowedProducts.add("Hygienic products");
         allowedProducts.add("products");
-        allowedProducts.add("animal4 products");
+        allowedProducts.add("products1");
         allowedProducts.add("animal5 products");
         allowedProducts.add("animal6 products");
         allowedProducts.add("animal7 products");
