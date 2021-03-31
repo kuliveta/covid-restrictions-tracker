@@ -4,4 +4,6 @@ public class Catering {
     //comment
 
     /// comment
+    //**//
+
 }
