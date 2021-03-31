@@ -17,11 +17,9 @@ public class Main<numberOfTypeOfBusiness> {
 
         BusinessType.chooseBusinessType(1,corporateBusinessType);
 
-
         Retail.messageToCustomer();
         Retail.getProductsList();
-        Retail productQuestions = new Retail();
-        productQuestions.messageAccordingToProductGroup();
+        Retail.messageAccordingToProductGroup();
         Retail.getNumberOfPeople();
 
     }
