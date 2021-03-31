@@ -20,10 +20,10 @@ public class Retail {
     public static void getProductsList() {
       
         List<String> allowedProducts = new ArrayList<>();
-        allowedProducts.add("food");
-        allowedProducts.add("pharmacy");
-        allowedProducts.add("animal products");
-        allowedProducts.add("animal1 products");
+        allowedProducts.add("Food");
+        allowedProducts.add("Pharmacy");
+        allowedProducts.add("Animal products");
+        allowedProducts.add("Gasoline services");
         allowedProducts.add("animal2 products");
         allowedProducts.add("animal3 products");
         allowedProducts.add("animal4 products");
