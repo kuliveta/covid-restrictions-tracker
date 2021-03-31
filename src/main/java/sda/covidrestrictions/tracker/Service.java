@@ -1,4 +1,7 @@
 package sda.covidrestrictions.tracker;
 
 public class Service {
-} // commit
+    public static void main(String[] args) {
+
+    }
+}
