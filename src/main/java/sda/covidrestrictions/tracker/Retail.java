@@ -8,9 +8,9 @@ public class Retail {
 
     static int numberOfPeople = 1;
     static int allowedSqMetersPerPerson = 25;
-    int numberOfProductType;
+    static int numberOfProductType;
 
-        List<String> allowedProducts = new ArrayList<>();
+        static List<String> allowedProducts = new ArrayList<>();
 
         public static void messageToCustomer (){
         Scanner scanner = new Scanner(System.in);
@@ -35,7 +35,7 @@ public class Retail {
             System.out.println((i+1)+" - " + allowedProducts.get(i) + ";");}}
 
 
-    public void messageAccordingToProductGroup(){
+    public static void messageAccordingToProductGroup(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter number next to your main product group:");
         numberOfProductType = scanner.nextInt();

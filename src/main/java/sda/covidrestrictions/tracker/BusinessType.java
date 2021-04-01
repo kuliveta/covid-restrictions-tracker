@@ -5,12 +5,17 @@ import java.util.List;
 import java.util.Scanner;
 
 public class BusinessType {
-    public static void getBusinessType(List<String> corporateBusinessType) {
-        int numberOfTypeOfBusiness;
-
+    int numberOfTypeOfBusiness;
+    public static void welcomeMessageToUser() {
         System.out.println("Dear user of Covid tracker please enter number belonging to your business type");
+    }
+    public static void getUserInput() {
+        System.out.println("Number of your business type is:");
+        Scanner scanner = new Scanner(System.in);
+        int numberOfTypeOfBusiness = scanner.nextInt();
+    }}
 
-        for (int i = 0; i < corporateBusinessType.size(); i++) {
+        /*for (int i = 0; i < corporateBusinessType.size(); i++) {
             System.out.println(( i + 1 ) + " - " + corporateBusinessType.get(i) + ";");
 
         }
@@ -32,6 +37,6 @@ public class BusinessType {
 
 
 
-}
+}*/
 
 
