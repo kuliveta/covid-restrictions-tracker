@@ -1,5 +1,5 @@
 package sda.covidrestrictions.tracker;
 
 public class Events {
-    //Linda
+    //Linda bija seit
 }
