@@ -14,8 +14,8 @@ public class Retail {
 
         public static void messageToCustomer (){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please choose one of product categories below" +
-                "represented in your portfolio in amount which exceeds 70%");}
+        System.out.println("Please choose one of the product categories below " +
+                "represented in your portfolio in amount which exceeds 70% : ");}
 
     public static void getProductsList() {
       
@@ -25,10 +25,10 @@ public class Retail {
         allowedProducts.add("Animal products");
         allowedProducts.add("Gasoline services");
         allowedProducts.add("Hygienic products");
-        allowedProducts.add("Olgas products");
-        allowedProducts.add("products1");
-        allowedProducts.add("animal5 products");
-        allowedProducts.add("animal6 products");
+        allowedProducts.add("Optical products");
+        allowedProducts.add("Flowers");
+        allowedProducts.add("Bookstore");
+        allowedProducts.add("Press sales");
         allowedProducts.add("animal7 products");
         allowedProducts.add("other products");
         for (int i = 0; i < allowedProducts.size() ; i++) {
@@ -37,20 +37,20 @@ public class Retail {
 
     public static void messageAccordingToProductGroup(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter number next to your main product group:");
+        System.out.println("Enter the number next to the product group that is your main (more than 70%) business :");
         numberOfProductType = scanner.nextInt();
         if(numberOfProductType == allowedProducts.size()){
-        System.out.println("Sorry business selling those products is not allowed to operate");
+        System.out.println("Sorry, selling of those products in person currently is not allowed.");
         System.exit(0);}
-        else System.out.println("Retail business selling those products is allowed to operate following" +
+        else System.out.println("Retail business selling those products is allowed to operate if are met the following " +
                 "\"square meter per person\" guidelines");}
 
     public static void getNumberOfPeople() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please enter size of your premises in square meters");
+        System.out.println("Please, enter the size of your premises used for customer service in square meters : ");
         int sizeOfPremises = scanner.nextInt();
         if (sizeOfPremises > 49) numberOfPeople = sizeOfPremises / allowedSqMetersPerPerson;
-            System.out.println("allowed number of people  " + numberOfPeople);
+            System.out.println("Allowed number of customers in your shop is : " + numberOfPeople);
  }
 
     }

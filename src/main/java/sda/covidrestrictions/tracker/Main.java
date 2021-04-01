@@ -15,12 +15,12 @@ public class Main<numberOfTypeOfBusiness> {
         for (int i = 0; i < corporateBusinessType.size(); i++) {
             System.out.println(( i + 1 ) + " - " + corporateBusinessType.get(i) + ";");
         }
-        System.out.println("Please put number of your business type here:");
+        System.out.println("Please, enter the number of your business type here:");
         Scanner scanner = new Scanner(System.in);
         int numberOfTypeOfBusiness = scanner.nextInt();
         if (numberOfTypeOfBusiness > corporateBusinessType.size()) {
-            System.out.println("Sorry, you have entered number out of scope");
-        } else System.out.printf("Since you are representative of %s business, please answer following questions: ",
+            System.out.println("Sorry, the number you entered is out of scope");
+        } else System.out.printf("Since you are representative of %s business, please answer the following questions: ",
                 corporateBusinessType.get(numberOfTypeOfBusiness - 1));
         System.out.println("_______________");
 

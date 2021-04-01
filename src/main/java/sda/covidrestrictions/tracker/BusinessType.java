@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class BusinessType {
     int numberOfTypeOfBusiness;
     public static void welcomeMessageToUser() {
-        System.out.println("Dear user of Covid tracker please enter number belonging to your business type");
+        System.out.println("Dear user of Covid restrictions tracker, please enter the number that corresponds to your business type");
     }
     public static void getUserInput() {
         System.out.println("Number of your business type is:");
