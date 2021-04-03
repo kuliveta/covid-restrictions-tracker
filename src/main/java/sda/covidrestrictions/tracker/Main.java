@@ -25,6 +25,7 @@ public class Main<numberOfTypeOfBusiness> {
         System.out.println("_______________");
 
 
+
         switch (numberOfTypeOfBusiness) {
             case 1:
                 Retail.messageToCustomer();
@@ -33,7 +34,10 @@ public class Main<numberOfTypeOfBusiness> {
                 Retail.getNumberOfPeople();
                 break;
             case 2:
-                System.out.println("Catering");
+                Catering.messageToCateringCustomer();
+                Catering.productListCatering();
+                Catering.messageAccordingToGroup();
+                Catering.getNumberOfPeopleInside();
                 break;
             case 3:
                 System.out.println("Services");
@@ -44,6 +48,8 @@ public class Main<numberOfTypeOfBusiness> {
 
 
         }
+        System.out.println("*****************************");
+        System.out.println("Thank you for using our app!");
     }
 }
 
