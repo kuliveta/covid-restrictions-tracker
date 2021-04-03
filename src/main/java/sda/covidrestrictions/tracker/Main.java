@@ -35,6 +35,7 @@ public class Main<numberOfTypeOfBusiness> {
                 break;
             case 2:
                 Catering.messageToCateringCustomer();
+                //Catering.DiningOptions();
                 Catering.productListCatering();
                 Catering.messageAccordingToGroup();
                 Catering.getNumberOfPeopleInside();

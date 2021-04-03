@@ -16,8 +16,18 @@ public class Catering {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please choose one of the options: ");}
 
-    public static void productListCatering(){
+        /*public static void DiningOptions (){
+            List<String> allowedFunctions = new ArrayList<>();
+            allowedFunctions.add("Outdoors");
+            allowedFunctions.add("Indoors");
+            for (int i = 0; i < allowedFunctions.size() ; i++) {
+                System.out.println((i+1)+" - " + allowedFunctions.get(i) + ";");
+            }}
+       */
 
+    public static void productListCatering(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please choose one of dining options: ");
         List<String> allowedFunctions = new ArrayList<>();
         allowedFunctions.add("Eat in");
         allowedFunctions.add("Take away");
@@ -26,13 +36,14 @@ public class Catering {
 
     public static void messageAccordingToGroup(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the number next to the product group to confirm your decision:");
+        System.out.println("Enter the number next to the dining option to confirm your decision:");
         numberOfProductType = scanner.nextInt();
         if(numberOfProductType == allowedFunctions.size()) {
             System.out.println("Sorry, selling of those products in person currently is not allowed.");
-            //System.exit(0);
-        } else System.out.println("Retail business selling those products is allowed to operate if are met the following " +
-                "\"square meter per person\" guidelines");}
+            System.exit(0);}
+        else System.out.println("Retail business selling those products is allowed to operate if are met the following " +
+                "\"square meter per person\" guidelines");
+    }
 
     public static void getNumberOfPeopleInside() {
         Scanner scanner = new Scanner(System.in);
