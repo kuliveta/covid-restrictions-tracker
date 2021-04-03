@@ -34,7 +34,7 @@ public class Main<numberOfTypeOfBusiness> {
                 Retail.getNumberOfPeople();
                 break;
             case 2:
-                Catering.messageToCateringCustomer();
+                //Catering.messageToCateringCustomer();
                 //Catering.DiningOptions();
                 Catering.productListCatering();
                 Catering.messageAccordingToGroup();

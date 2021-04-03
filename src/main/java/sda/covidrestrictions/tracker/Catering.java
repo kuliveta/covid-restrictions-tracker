@@ -12,11 +12,11 @@ public class Catering {
 
     static List<String> allowedFunctions = new ArrayList<>();
 
-    public static void messageToCateringCustomer (){
+   /* public static void messageToCateringCustomer (){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please choose one of the options: ");}
 
-        /*public static void DiningOptions (){
+        public static void DiningOptions (){
             List<String> allowedFunctions = new ArrayList<>();
             allowedFunctions.add("Outdoors");
             allowedFunctions.add("Indoors");
