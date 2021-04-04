@@ -8,28 +8,13 @@ public class Catering {
 
     static int numberOfPeople = 1;
     static int allowedSqMetersPerPerson = 25;
-    static int numberOfProductType;
 
-    static List<String> allowedFunctions = new ArrayList<>();
-
-   /* public static void messageToCateringCustomer (){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Please choose one of the options: ");}
-
-        public static void DiningOptions (){
-            List<String> allowedFunctions = new ArrayList<>();
-            allowedFunctions.add("Outdoors");
-            allowedFunctions.add("Indoors");
-            for (int i = 0; i < allowedFunctions.size() ; i++) {
-                System.out.println((i+1)+" - " + allowedFunctions.get(i) + ";");
-            }}
-       */
 
     public static void productListCatering(){
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Please choose one of dining options: ");
         List<String> allowedFunctions = new ArrayList<>();
         allowedFunctions.add("Eat in");
+        allowedFunctions.add("Serving clients outside on terraces");
         allowedFunctions.add("Take away");
         for (int i = 0; i < allowedFunctions.size() ; i++) {
             System.out.println((i+1)+" - " + allowedFunctions.get(i) + ";");}}
@@ -37,12 +22,19 @@ public class Catering {
     public static void messageAccordingToGroup(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the number next to the dining option to confirm your decision:");
-        numberOfProductType = scanner.nextInt();
-        if(numberOfProductType == allowedFunctions.size()) {
-            System.out.println("Sorry, selling of those products in person currently is not allowed.");
+        int numberOfDiningType = scanner.nextInt();
+        if(numberOfDiningType == 1) {
+            System.out.println("Sorry, at this moment you can not serve customers inside");
             System.exit(0);}
-        else System.out.println("Retail business selling those products is allowed to operate if are met the following " +
-                "\"square meter per person\" guidelines");
+        if(numberOfDiningType == 2) {
+            System.out.println("Sorry, at this moment you can not serve customers outside, but please check our" +
+                    "application in a few days since we are expecting changes here");
+            System.exit(0);}
+        if(numberOfDiningType == 3) {
+            System.out.println("You can provide takeaway service strictly following " +
+                    "\"square meter per person\" guidelines");
+            System.exit(0);}
+        else System.out.println("Sorry, you have entered number out of provided functions scope");
     }
 
     public static void getNumberOfPeopleInside() {

@@ -6,10 +6,18 @@ import java.util.Scanner;
 
 public class BusinessType {
     int numberOfTypeOfBusiness;
+
     public static void welcomeMessageToUser() {
         System.out.println("Dear user of Covid restrictions tracker, please enter the number that corresponds to your business type");
     }
-    public static void getUserInput() {
+    public static void legalDisclaimer() {
+        System.out.println("blablablabla");
+    }
+    public static void thanksForUsingMessage() {
+        System.out.println("blablablabla");
+    }
+}
+    /*public static void getUserInput() {
         System.out.println("Number of your business type is:");
         Scanner scanner = new Scanner(System.in);
         int numberOfTypeOfBusiness = scanner.nextInt();
