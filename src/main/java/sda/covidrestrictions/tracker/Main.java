@@ -44,7 +44,9 @@ public class Main<numberOfTypeOfBusiness> {
                 System.out.println("Services");
                 break;
             case 4:
-                System.out.println("Events");
+                //System.out.println("Events");
+                Events.ListEvents();
+                Events.messageAccordingToEventType();
                 break;
 
 
