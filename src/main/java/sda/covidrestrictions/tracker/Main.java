@@ -51,8 +51,8 @@ public class Main<numberOfTypeOfBusiness> {
 
 
         }
-        System.out.println("*****************************");
-        System.out.println("Thank you for using our app!");
+        System.out.println("**************** \n Be responsible and follow the restrictions! \n * We do not take responsibility if any of the rules have changed or do not comply with government decisions.");
+        System.out.println("**************** \nThank you for using our app!");
     }
 }
 

@@ -22,9 +22,10 @@ public class Events {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the number next to the option you choose :");
         numberOfEventType = scanner.nextInt();
-        if(numberOfEventType == insideOrOutsideAllowed.size()) {
-            System.out.println("Sorry, currently events inside for corporate reasons are not allowed.");
-            System.exit(0);}
-        else System.out.println("Sorry, currently events outside for corporate reasons are not allowed.");
+        if(numberOfEventType == 1) {
+            System.out.println("Sorry, currently events inside are not allowed.");
+        }else if (numberOfEventType == 2) {
+            System.out.println("Sorry, currently events outside are not allowed.");
+        }else System.out.println("Sorry, the number you entered is out of range. Please, enter correct number!");
     }
 }
