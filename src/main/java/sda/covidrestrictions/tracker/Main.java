@@ -30,21 +30,16 @@ public class Main<numberOfTypeOfBusiness> {
             case 1:
                 Retail.messageToCustomer();
                 Retail.getProductsList();
-                Retail.messageAccordingToProductGroup();
                 Retail.getNumberOfPeople();
                 break;
             case 2:
-                //Catering.messageToCateringCustomer();
-                //Catering.DiningOptions();
                 Catering.productListCatering();
-                Catering.messageAccordingToGroup();
                 Catering.getNumberOfPeopleToOrderTakeAway();
                 break;
             case 3:
                 System.out.println("Services");
                 break;
             case 4:
-                //System.out.println("Events");
                 Events.ListEvents();
                 Events.messageAccordingToEventType();
                 break;

@@ -10,9 +10,8 @@ public class Events {
 
     static List<String> insideOrOutsideAllowed = new ArrayList<>();
     public static void ListEvents(){
-        Scanner scanner = new Scanner(System.in);
+
         System.out.println("Please choose where will be held the event: ");
-        List<String> insideOrOutsideAllowed = new ArrayList<>();
         insideOrOutsideAllowed.add("Inside");
         insideOrOutsideAllowed.add("Outside");
         for (int i = 0; i < insideOrOutsideAllowed.size() ; i++) {

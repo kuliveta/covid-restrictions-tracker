@@ -10,7 +10,6 @@ public class Retail {
     static int allowedSqMetersPerPerson = 25;
     static int numberOfProductType;
 
-        static List<String> allowedProducts = new ArrayList<>();
 
         public static void messageToCustomer (){
         Scanner scanner = new Scanner(System.in);
@@ -32,16 +31,17 @@ public class Retail {
         allowedProducts.add("animal7 products");
         allowedProducts.add("other products");
         for (int i = 0; i < allowedProducts.size() ; i++) {
-            System.out.println((i+1)+" - " + allowedProducts.get(i) + ";");}}
+            System.out.println((i+1)+" - " + allowedProducts.get(i) + ";");}
 
-
-    public static void messageAccordingToProductGroup(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the number next to the product group that is your main (more than 70%) business :");
+        System.out.println("sss" + allowedProducts.size());
         numberOfProductType = scanner.nextInt();
         if(numberOfProductType == allowedProducts.size()){
         System.out.println("Sorry, selling of those products in person currently is not allowed.");
         System.exit(0);}
+        if(numberOfProductType >= allowedProducts.size()){
+            System.out.println("Sorry, number you have entered is out of list scope"); System.exit(0);}
         else System.out.println("Retail business selling those products is allowed to operate if are met the following " +
                 "\"square meter per person\" guidelines");}
 
