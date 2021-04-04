@@ -38,7 +38,7 @@ public class Main<numberOfTypeOfBusiness> {
                 //Catering.DiningOptions();
                 Catering.productListCatering();
                 Catering.messageAccordingToGroup();
-                Catering.getNumberOfPeopleInside();
+                Catering.getNumberOfPeopleToOrderTakeAway();
                 break;
             case 3:
                 System.out.println("Services");

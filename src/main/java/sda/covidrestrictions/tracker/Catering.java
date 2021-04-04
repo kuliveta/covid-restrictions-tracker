@@ -37,7 +37,7 @@ public class Catering {
         else System.out.println("Sorry, you have entered number out of provided functions scope");
     }
 
-    public static void getNumberOfPeopleInside() {
+    public static void getNumberOfPeopleToOrderTakeAway() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please, enter the size of your premises used for customer service in square meters: ");
         int sizeOfPremises = scanner.nextInt();
