@@ -38,6 +38,8 @@ public class Main<numberOfTypeOfBusiness> {
                 break;
             case 3:
                 System.out.println("Services");
+                Service.servicePlace();
+
                 break;
             case 4:
                 Events.ListEvents();
