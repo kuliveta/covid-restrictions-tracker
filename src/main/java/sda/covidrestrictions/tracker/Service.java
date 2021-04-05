@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Service {
     static int numberOfPeople = 1;
     static int allowedSqMetersPerPerson = 25;
-    static int numberOfProductType;
+
 
     public static void servicePlace() {
         int insideOutsideService = 0;

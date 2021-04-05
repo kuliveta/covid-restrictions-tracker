@@ -33,7 +33,7 @@ public class Catering {
             System.exit(0);}
         else  {
             System.out.println("You can provide takeaway service strictly following " +
-                    "\"square meter per person\" guidelines");
+                    "\"square meter per person\" guidelines"); getNumberOfPeopleToOrderTakeAway();
         }}
 
     public static void getNumberOfPeopleToOrderTakeAway() {
