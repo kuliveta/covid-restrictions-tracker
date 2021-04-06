@@ -29,8 +29,8 @@ public class Catering {
                     " application in a few days since we are expecting changes here");
             System.exit(0);}
         else if(numberOfDiningType > allowedFunctions.size()){
-            System.out.println("Sorry, you have entered number out of provided functions scope");
-            System.exit(0);}
+            System.out.println("Sorry, you have entered number out of provided functions scope"); ifToTryOneMoreTime();
+            }
         else  {
             System.out.println("You can provide takeaway service strictly following " +
                     "\"square meter per person\" guidelines"); getNumberOfPeopleToOrderTakeAway();
@@ -43,4 +43,15 @@ public class Catering {
         if (sizeOfPremises > 49) numberOfPeople = sizeOfPremises / allowedSqMetersPerPerson;
         System.out.println("Allowed number of customers in your shop is : " + numberOfPeople);
 
+}
+    public static void ifToTryOneMoreTime(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Do you want to check another option? Yes or No?");
+        String tryOneMoreTime = scanner.next();
+        if (tryOneMoreTime.equalsIgnoreCase("yes")) productListCatering();
+        else System.exit(0);}
+
+
+    public static void generalRulesForCatering() {
+        System.out.println("General Rules");
 }}

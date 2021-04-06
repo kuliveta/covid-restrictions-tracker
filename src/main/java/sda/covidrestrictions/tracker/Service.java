@@ -34,7 +34,6 @@ public class Service {
                 System.out.println("Please choose the number of the service - next to the option you choose :");
                 numberOfInsideService = scanner.nextInt();
             }
-            //System.out.println("The size of serviceListInside is: " + serviceListInside.size());
 
             if (numberOfInsideService < serviceListInside.size()) {
                 System.out.println("Hi, this inside service <" + serviceListInside.get(numberOfInsideService - 1) + "> is allowed!");
@@ -64,11 +63,8 @@ public class Service {
 
                 System.out.println("Sorry, currently <" + serviceListOutside.get(numberOfOutsideService - 1) + "> are not allowed.");
             }
-            //System.out.println("Print entered service number: "+insideOutsideService);
-
 
         }
-
 
     }
     public static void getNumberOfPeopleService() {
@@ -77,5 +73,9 @@ public class Service {
         int sizeOfPremises = scanner.nextInt();
         if (sizeOfPremises > 49) numberOfPeople = sizeOfPremises / allowedSqMetersPerPerson;
         System.out.println("Allowed number of customers in your premises is : " + numberOfPeople);
+    }
+
+    public static void generalHygienicStandardsForServices(){
+        System.out.println("MK noteikumi");
     }
 }

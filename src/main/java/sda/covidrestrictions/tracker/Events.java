@@ -9,22 +9,76 @@ public class Events {
     static int numberOfEventType;
 
     static List<String> insideOrOutsideAllowed = new ArrayList<>();
-    public static void ListEvents(){
+    static int allowedSqMetersPerPerson = 25;
+    static int numberOfPeople = 1;
 
-        System.out.println("Please choose where will be held the event: ");
+    public static void PlaceOfEvent() {
+
+        System.out.println("Please choose where event will be held.: ");
         insideOrOutsideAllowed.add("Inside");
         insideOrOutsideAllowed.add("Outside");
-        for (int i = 0; i < insideOrOutsideAllowed.size() ; i++) {
-            System.out.println((i+1)+" - " + insideOrOutsideAllowed.get(i) + ";");}}
-
-    public static void messageAccordingToEventType(){
+        for (int i = 0; i < insideOrOutsideAllowed.size(); i++) {
+            System.out.println(( i + 1 ) + " - " + insideOrOutsideAllowed.get(i) + ";");
+        }
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the number next to the option you choose :");
+        System.out.println("Type 1 for Inside and 2 for outside events :");
         numberOfEventType = scanner.nextInt();
-        if(numberOfEventType == 1) {
-            System.out.println("Sorry, currently events inside are not allowed.");
-        }else if (numberOfEventType == 2) {
-            System.out.println("Sorry, currently events outside are not allowed.");
-        }else System.out.println("Sorry, the number you entered is out of range. Please, enter correct number!");
+        if (numberOfEventType == 1) {
+            insideEventsNotAllowed();
+
+        } else if (numberOfEventType == 2) {
+            outsideEventsNotAllowed();
+
+        } else System.out.println("Sorry, the number you entered is out of range. Please, enter correct number!");
     }
+
+    public static void insideEventsNotAllowed() {
+        System.out.println("Sorry, currently events inside are not allowed.");
+    }
+
+    public static void outsideEventsNotAllowed() {
+        System.out.println("Sorry, currently events outside are not allowed.");
+    }
+
+    public static void insideEventsAllowed(){
+        List<String> activityTypeInside = new ArrayList<>();
+        activityTypeInside.add("Theater");
+        activityTypeInside.add("Cinema");
+        activityTypeInside.add("Sports");
+        for (int i = 0; i < activityTypeInside.size() ; i++) {
+            System.out.println((i+1)+" - " + activityTypeInside.get(i) + ";");}
+        System.out.println("Please choose number next to your type of the event");
+        Scanner scanner = new Scanner(System.in);
+        int typeOfInsideEvent = scanner.nextInt();}
+
+    public static void outsideEventsAllowed(){
+        List<String> activityTypeOutside = new ArrayList<>();
+        activityTypeOutside.add("Concert");
+        activityTypeOutside.add("Sports");
+    for (int i = 0; i < activityTypeOutside.size() ; i++) {
+        System.out.println((i+1)+" - " + activityTypeOutside.get(i) + ";");}
+        System.out.println("Please choose number next to your type of the event");
+    Scanner scanner = new Scanner(System.in);
+    int typeOfOutsideEvent = scanner.nextInt();
+    getNumberOfPeople();getLengthOfEvent();}
+
+    public static void getNumberOfPeople() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please, enter the size of your event space : ");
+        int sizeOfPremises = scanner.nextInt();
+        if (sizeOfPremises > 49) numberOfPeople = sizeOfPremises / allowedSqMetersPerPerson;
+        System.out.println("Allowed number of customers in your shop is : " + numberOfPeople);}
+
+    public static void getLengthOfEvent(){
+        System.out.println("Please indicate length of your event in hours");
+        List<Double> lengthOfEvent = new ArrayList<>();
+        lengthOfEvent.add(0.5);
+        lengthOfEvent.add(1.0);
+        lengthOfEvent.add(1.5);
+        lengthOfEvent.add(2.0);
+        for (int i = 0; i < lengthOfEvent.size() ; i++) {
+            System.out.println((i+1)+" - " + lengthOfEvent.get(i) + ";");}
+        Scanner scanner = new Scanner(System.in);
+        int choiceNumber = scanner.nextInt();}
+
 }

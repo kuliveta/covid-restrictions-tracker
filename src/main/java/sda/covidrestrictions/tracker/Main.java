@@ -33,13 +33,14 @@ public class Main<Covid> {
                 break;
             case 2:
                 Catering.productListCatering();
+                Catering.generalRulesForCatering();
                 break;
             case 3:
                 Service.servicePlace();
+                Service.generalHygienicStandardsForServices();
                 break;
             case 4:
-                Events.ListEvents();
-                Events.messageAccordingToEventType();
+                Events.PlaceOfEvent();
                 break;
 
 
