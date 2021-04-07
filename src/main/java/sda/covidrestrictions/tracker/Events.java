@@ -9,8 +9,7 @@ public class Events {
     static int numberOfEventType;
 
     static List<String> insideOrOutsideAllowed = new ArrayList<>();
-    static int allowedSqMetersPerPerson = 25;
-    static int numberOfPeople = 1;
+
 
     public static void PlaceOfEvent() {
 

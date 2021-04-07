@@ -7,6 +7,7 @@ public class Main<Covid> {
 
     public static void main(String[] args) {
         General.welcomeMessageToUser();
+
         List<String> corporateBusinessType = new ArrayList<>();
         corporateBusinessType.add("Retail");
         corporateBusinessType.add("Catering");
@@ -24,31 +25,17 @@ public class Main<Covid> {
                 corporateBusinessType.get(numberOfTypeOfBusiness - 1));
         System.out.println("                     ");
 
-
-
         switch (numberOfTypeOfBusiness) {
-            case 1:
-                Retail.messageToCustomer();
-                Retail.getProductsList();
-                break;
-            case 2:
-                Catering.productListCatering();
-                Catering.generalRulesForCatering();
-                break;
-            case 3:
-                Service.servicePlace();
-                Service.generalHygienicStandardsForServices();
-                break;
-            case 4:
-                Events.PlaceOfEvent();
-                break;
-
-
+            case 1: Retail.restrictionsToRetail();break;
+            case 2: Catering.restrictionsToCatering();break;
+            case 3: Service.restrictionsToServices();break;
+            case 4: Events.PlaceOfEvent();break;
         }
         General.legalDisclaimer();
         General.thanksForUsing();
 
     }
+
 }
 
 

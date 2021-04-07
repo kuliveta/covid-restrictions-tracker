@@ -6,11 +6,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Service {
-    static int numberOfPeople = 1;
-    static int allowedSqMetersPerPerson = 25;
 
-
-    public static void servicePlace() {
+    public static void restrictionsToServices() {
         int insideOutsideService = 0;
         int numberOfInsideService = 0;
         int numberOfOutsideService = 0;
@@ -49,7 +46,7 @@ public class Service {
             serviceListOutside.add("Other services Outside");
 
             for (int i = 0; i < serviceListOutside.size(); i++) {
-                System.out.println((i + 1) + " - " + serviceListOutside.get(i) + ";");
+                System.out.println(( i + 1 ) + " - " + serviceListOutside.get(i) + ";");
             }
             while (numberOfOutsideService > serviceListOutside.size() || numberOfOutsideService < 1) {
                 System.out.println("Please choose the number of the service - next to the option you choose :");
@@ -64,11 +61,5 @@ public class Service {
                 System.out.println("Sorry, currently <" + serviceListOutside.get(numberOfOutsideService - 1) + "> are not allowed.");
             }
 
-        }
 
-    }
-
-    public static void generalHygienicStandardsForServices(){
-        System.out.println("MK noteikumi");
-    }
-}
+        }}}
