@@ -33,17 +33,10 @@ public class Catering {
             }
         else  {
             System.out.println("You can provide takeaway service strictly following " +
-                    "\"square meter per person\" guidelines"); getNumberOfPeopleToOrderTakeAway();
+                    "\"square meter per person\" guidelines"); General.getAllowedNumberOfPeople();
         }}
 
-    public static void getNumberOfPeopleToOrderTakeAway() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Please, enter the size of your premises used for customer service in square meters: ");
-        double sizeOfPremises = scanner.nextDouble();
-        if (sizeOfPremises > 49) numberOfPeople = (int) (sizeOfPremises / allowedSqMetersPerPerson);
-        System.out.println("Allowed number of customers in your shop is : " + numberOfPeople);
 
-}
     public static void ifToTryOneMoreTime(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Do you want to check another option? Yes or No?");

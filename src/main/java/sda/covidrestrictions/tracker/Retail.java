@@ -45,16 +45,10 @@ public class Retail {
                 General.legalDisclaimer();General.thanksForUsing();System.exit(0);}
 
             else System.out.println("Retail business selling those products is allowed to operate strictly following " +
-                    "\"square meter per person\" guidelines"); getNumberOfPeople();
+                    "\"square meter per person\" guidelines"); General.getAllowedNumberOfPeople();
         }
 
-    public static void getNumberOfPeople() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Please, enter the size of your premises used for customer service in square meters : ");
-        double sizeOfPremises = scanner.nextDouble();
-        if (sizeOfPremises > 49) numberOfPeople = (int) (sizeOfPremises / allowedSqMetersPerPerson);
-            System.out.println("Allowed number of customers in your shop is : " + numberOfPeople);
- }
+
 
     public static void ifToTryOneMoreTime(){
         Scanner scanner = new Scanner(System.in);

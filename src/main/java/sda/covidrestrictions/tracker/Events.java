@@ -60,14 +60,9 @@ public class Events {
         System.out.println("Please choose number next to your type of the event");
     Scanner scanner = new Scanner(System.in);
     int typeOfOutsideEvent = scanner.nextInt();
-    getNumberOfPeople();getLengthOfEvent();}
+    General.getAllowedNumberOfPeople();getLengthOfEvent();}
 
-    public static void getNumberOfPeople() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Please, enter the size of your event space : ");
-        double sizeOfPremises = scanner.nextDouble();
-        if (sizeOfPremises > 49) numberOfPeople = (int) (sizeOfPremises / allowedSqMetersPerPerson);
-        System.out.println("Allowed number of customers in your shop is : " + numberOfPeople);}
+
 
     public static void getLengthOfEvent(){
         System.out.println("Please indicate length of your event in hours");
