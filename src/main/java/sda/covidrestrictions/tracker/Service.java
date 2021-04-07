@@ -70,8 +70,8 @@ public class Service {
     public static void getNumberOfPeopleService() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please, enter the size of your premises used for customer service in square meters : ");
-        int sizeOfPremises = scanner.nextInt();
-        if (sizeOfPremises > 49) numberOfPeople = sizeOfPremises / allowedSqMetersPerPerson;
+        double sizeOfPremises = scanner.nextDouble();
+        if (sizeOfPremises > 49) numberOfPeople = (int) (sizeOfPremises / allowedSqMetersPerPerson);
         System.out.println("Allowed number of customers in your premises is : " + numberOfPeople);
     }
 

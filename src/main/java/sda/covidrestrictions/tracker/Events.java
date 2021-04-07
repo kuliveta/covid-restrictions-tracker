@@ -65,8 +65,8 @@ public class Events {
     public static void getNumberOfPeople() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please, enter the size of your event space : ");
-        int sizeOfPremises = scanner.nextInt();
-        if (sizeOfPremises > 49) numberOfPeople = sizeOfPremises / allowedSqMetersPerPerson;
+        double sizeOfPremises = scanner.nextDouble();
+        if (sizeOfPremises > 49) numberOfPeople = (int) (sizeOfPremises / allowedSqMetersPerPerson);
         System.out.println("Allowed number of customers in your shop is : " + numberOfPeople);}
 
     public static void getLengthOfEvent(){
