@@ -8,6 +8,35 @@ public class General {
 
     static int numberOfPeople = 1;
     static int allowedSqMetersPerPerson = 25;
+    static List<String> corporateBusinessType = new ArrayList<>();
+
+
+    public static void printOutBusinessTypeOptions(){
+        corporateBusinessType.add("Retail");
+        corporateBusinessType.add("Catering");
+        corporateBusinessType.add("Services");
+        corporateBusinessType.add("Events");
+        for (int i = 0; i < corporateBusinessType.size(); i++) {
+            System.out.println(( i + 1 ) + " - " + corporateBusinessType.get(i) + ";");
+        }}
+
+    public static void getInputAboutBusinessType(){
+        System.out.println("Please, enter the number of your business type here:");
+        Scanner scanner = new Scanner(System.in);
+        int numberOfTypeOfBusiness = scanner.nextInt();
+        if (numberOfTypeOfBusiness > corporateBusinessType.size()) {
+            System.out.println("Sorry, the number you entered is out of scope");
+        } else System.out.printf("Since you are representative of %s business, please answer the following questions: ",
+                corporateBusinessType.get(numberOfTypeOfBusiness - 1));
+        System.out.println("                     ");
+
+        switch (numberOfTypeOfBusiness) {
+            case 1: Retail.restrictionsToRetail();break;
+            case 2: Catering.restrictionsToCatering();break;
+            case 3: Service.restrictionsToServices();break;
+            case 4: Events.restrictionsForEvents();break;
+        } }
+
 
     public static void getAllowedNumberOfPeople() {
         Scanner scanner = new Scanner(System.in);
@@ -18,7 +47,10 @@ public class General {
     }
 
     public static void welcomeMessageToUser() {
-        System.out.println("Dear user of Covid restrictions tracker, please enter the number that corresponds to your business type");
+        System.out.println("Hello! Welcome to our Covid restrictions tracker for corporate usage!\n" +
+                "We hope our information will give more certainty on Government and Health Institutions" +
+                "decisions to stop Covid 19 spreading in our country.\n " +
+                "Please follow upcoming instructions! At first you should enter the number that corresponds to your business type");
     }
 
 

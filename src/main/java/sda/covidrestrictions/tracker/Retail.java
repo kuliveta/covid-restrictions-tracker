@@ -5,12 +5,17 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Retail {
-
     static int numberOfProductType;
+    static List<String> allowedProducts = new ArrayList<>();
 
     public static void restrictionsToRetail() {
         messageToCustomer();
-        List<String> allowedProducts = new ArrayList<>();
+        getListOfAllowedProducts();
+        printMessageBasedOnProducts();
+    }
+
+
+    public static void getListOfAllowedProducts() {
         allowedProducts.add("Food");
         allowedProducts.add("Pharmacy");
         allowedProducts.add("Animal products");
@@ -18,18 +23,24 @@ public class Retail {
         allowedProducts.add("Hygienic products");
         allowedProducts.add("Optical products");
         allowedProducts.add("Flowers");
-        allowedProducts.add("Bookstore");
-        allowedProducts.add("Press sales");
+        allowedProducts.add("Books");
+        allowedProducts.add("Printed media");
         allowedProducts.add("Tobacco products and electronic smoking devices");
         allowedProducts.add("other products");
         for (int i = 0; i < allowedProducts.size(); i++) {
             System.out.println(( i + 1 ) + " - " + allowedProducts.get(i) + ";");
         }
-        identifyProducts();
+    }
+
+
+    public static void printMessageBasedOnProducts() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the number next to your main product group:");
+        numberOfProductType = scanner.nextInt();
         if (numberOfProductType == allowedProducts.size()) {
             notAllowedProducts();
         }
-        if (numberOfProductType >= allowedProducts.size()) {
+        if (numberOfProductType > allowedProducts.size()) {
             wrongNumberEntered();
         } else allowedProducts();
     }
@@ -65,13 +76,8 @@ public class Retail {
 
     public static void notAllowedProducts() {
         System.out.println("Sorry, selling of those products in person currently is not allowed.");
+        System.exit(0);
     }
 
-    public static void identifyProducts() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the number next to the product group that is your main (more than 70%) business :");
-        numberOfProductType = scanner.nextInt();
-
-    }
 
 }

@@ -5,37 +5,64 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Catering {
+    static List<String> cateringFunctions = new ArrayList<>();
+
 
     public static void restrictionsToCatering() {
-        System.out.println("Please choose one of dining options: ");
-        List<String> allowedFunctions = new ArrayList<>();
-        allowedFunctions.add("Eat in");
-        allowedFunctions.add("Serving clients outside on terraces");
-        allowedFunctions.add("Take away");
-        for (int i = 0; i < allowedFunctions.size(); i++) {
-            System.out.println(( i + 1 ) + " - " + allowedFunctions.get(i) + ";");
-        }
+        printListOfCateringOptions();
+        printRestrictionsAccordingToType();
+    }
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the number next to the dining option to confirm your decision:");
-        int numberOfDiningType = scanner.nextInt();
-        if (numberOfDiningType == allowedFunctions.size() - ( allowedFunctions.size() - 1 )) {
-            System.out.println("Sorry, at this moment you can not serve customers inside");
-            System.exit(0);
-        } else if (numberOfDiningType == allowedFunctions.size() - ( allowedFunctions.size() - 2 )) {
-            System.out.println("Sorry, at this moment you can not serve customers outside, but please check our" +
-                    " application in a few days since we are expecting changes here");
-            System.exit(0);
-        } else if (numberOfDiningType > allowedFunctions.size()) {
-            System.out.println("Sorry, you have entered number out of provided functions scope");
-            ifToTryOneMoreTime();
-        } else {
-            System.out.println("You can provide takeaway service strictly following " +
-                    "\"square meter per person\" guidelines");
-            General.getAllowedNumberOfPeople();
+
+    private static void printListOfCateringOptions() {
+        System.out.println("Please choose one of dining options: ");
+        cateringFunctions.add("Eat in");
+        cateringFunctions.add("Serving clients outside on terraces");
+        cateringFunctions.add("Take away");
+        for (int i = 0; i < cateringFunctions.size(); i++) {
+            System.out.println(( i + 1 ) + " - " + cateringFunctions.get(i) + ";");
         }
     }
 
+    private static void printRestrictionsAccordingToType() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the number next to your main product group:");
+        int numberOfDiningType = scanner.nextInt();
+        if (numberOfDiningType == cateringFunctions.size() - ( cateringFunctions.size() - 1 )) {
+            System.out.println("Sorry, at this moment you can not serve customers inside");
+            System.exit(0);
+        } else if (numberOfDiningType == cateringFunctions.size() - ( cateringFunctions.size() - 2 )) {
+            messageToCateringOutside();
+        } else if (numberOfDiningType > cateringFunctions.size()) {
+            messageAboutWrongNumber();
+
+        } else {
+            messageToTakeAwayServices();
+
+        }
+    }
+
+    private static void messageToCateringInside() {
+        System.out.println("Sorry, at this moment you can not serve customers inside");
+        System.exit(0);
+    }
+
+    private static void messageToCateringOutside() {
+        System.out.println("Sorry, at this moment you can not serve customers outside, but please check our" +
+                " application in a few days since we are expecting changes here");
+        System.exit(0);
+    }
+
+    private static void messageToTakeAwayServices() {
+        System.out.println("You can provide takeaway service strictly following " +
+                "\"square meter per person\" guidelines");
+        General.getAllowedNumberOfPeople();
+    }
+
+    private static void messageAboutWrongNumber() {
+        System.out.println("Sorry, you have entered number out of provided functions scope");
+        ifToTryOneMoreTime();
+    }
 
     public static void ifToTryOneMoreTime() {
         Scanner scanner = new Scanner(System.in);
