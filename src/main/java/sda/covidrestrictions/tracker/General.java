@@ -47,7 +47,7 @@ public class General {
     }
 
     public static void welcomeMessageToUser() {
-        System.out.println("Hello! Welcome to our Covid restrictions tracker for corporate usage!\n" +
+        System.out.println("\nHello! Welcome to our Covid restrictions tracker for corporate usage!\n\n" +
                 "We hope our information will give more certainty on Government and Health Institutions" +
                 "decisions to stop Covid 19 spreading in our country.\n " +
                 "Please follow upcoming instructions! At first you should enter the number that corresponds to your business type");

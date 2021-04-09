@@ -30,7 +30,7 @@ public class Catering {
         int numberOfDiningType = scanner.nextInt();
         if (numberOfDiningType == cateringFunctions.size() - ( cateringFunctions.size() - 1 )) {
             System.out.println("Sorry, at this moment you can not serve customers inside");
-            System.exit(0);
+
         } else if (numberOfDiningType == cateringFunctions.size() - ( cateringFunctions.size() - 2 )) {
             messageToCateringOutside();
         } else if (numberOfDiningType > cateringFunctions.size()) {
@@ -44,13 +44,13 @@ public class Catering {
 
     private static void messageToCateringInside() {
         System.out.println("Sorry, at this moment you can not serve customers inside");
-        System.exit(0);
+
     }
 
     private static void messageToCateringOutside() {
         System.out.println("Sorry, at this moment you can not serve customers outside, but please check our" +
                 " application in a few days since we are expecting changes here");
-        System.exit(0);
+
     }
 
     private static void messageToTakeAwayServices() {
