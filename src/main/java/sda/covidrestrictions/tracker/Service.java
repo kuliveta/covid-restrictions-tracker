@@ -11,6 +11,7 @@ public class Service {
         int insideOutsideService = 0;
         int numberOfInsideService = 0;
         int numberOfOutsideService = 0;
+        List<String> serviceListInside = new ArrayList<>();
 
         Scanner scanner = new Scanner(System.in);
         while (insideOutsideService > 2 || insideOutsideService < 1) {
@@ -18,7 +19,6 @@ public class Service {
             insideOutsideService = scanner.nextInt();
         }
         if (insideOutsideService == 1) {
-            List<String> serviceListInside = new ArrayList<>();
             serviceListInside.add("Hairdresser");
             serviceListInside.add("Manicure");
             serviceListInside.add("Pedicure");

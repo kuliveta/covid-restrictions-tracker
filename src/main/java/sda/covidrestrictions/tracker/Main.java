@@ -1,6 +1,6 @@
 package sda.covidrestrictions.tracker;
 
-public class Main<Covid> {
+public class Main {
 
     public static void main(String[] args) {
 
