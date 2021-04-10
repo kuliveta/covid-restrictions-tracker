@@ -70,7 +70,6 @@ public class Retail {
         ifToTryOneMoreTime();
         General.legalDisclaimer();
         General.thanksForUsing();
-        System.exit(0);
 
     }
 

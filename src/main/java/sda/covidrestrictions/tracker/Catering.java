@@ -26,10 +26,10 @@ public class Catering {
 
     private static void printRestrictionsAccordingToType() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the number next to your main product group:");
+        System.out.println("Enter the number next to dining option you want to provide:");
         int numberOfDiningType = scanner.nextInt();
-        if (numberOfDiningType == cateringFunctions.size() - ( cateringFunctions.size() - 1 )) {
-            System.out.println("Sorry, at this moment you can not serve customers inside");
+        if (numberOfDiningType == cateringFunctions.size() - ( cateringFunctions.size() - 1 )) {messageToCateringInside();
+
 
         } else if (numberOfDiningType == cateringFunctions.size() - ( cateringFunctions.size() - 2 )) {
             messageToCateringOutside();
