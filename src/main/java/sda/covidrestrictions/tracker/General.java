@@ -43,7 +43,7 @@ public class General {
         System.out.println("Please, enter the size of your premises square meters : ");
         double sizeOfPremises = scanner.nextDouble();
         if (sizeOfPremises > 49) numberOfPeople = (int) (sizeOfPremises / allowedSqMetersPerPerson);
-        System.out.println("Allowed number of customers in your shop is : " + numberOfPeople);
+        System.out.println("Allowed number of customers in your premises is : " + numberOfPeople);
     }
 
     public static void welcomeMessageToUser() {
