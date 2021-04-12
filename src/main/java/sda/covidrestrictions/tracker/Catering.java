@@ -33,8 +33,8 @@ public class Catering {
 
         } else if (numberOfDiningType == cateringFunctions.size() - ( cateringFunctions.size() - 2 )) {
             messageToCateringOutside();
-        } else if (numberOfDiningType > cateringFunctions.size()) {
-            messageAboutWrongNumber();
+        } else if (numberOfDiningType > cateringFunctions.size()||numberOfDiningType==0) {
+            messageAboutWrongNumber();ifToTryOneMoreTime();
 
         } else {
             messageToTakeAwayServices();
@@ -61,16 +61,19 @@ public class Catering {
 
     private static void messageAboutWrongNumber() {
         System.out.println("Sorry, you have entered number out of provided functions scope");
-        ifToTryOneMoreTime();
+
     }
 
     public static void ifToTryOneMoreTime() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Do you want to check another option? Yes or No?");
         String tryOneMoreTime = scanner.next();
-        if (tryOneMoreTime.equalsIgnoreCase("yes")) restrictionsToCatering();
-        else System.exit(0);
+        if (tryOneMoreTime.equalsIgnoreCase("yes")) repeatCycle();
+        else General.thanksForUsing();System.exit(0);
     }
+
+
+    private static void repeatCycle(){printRestrictionsAccordingToType();}
 
 
 }

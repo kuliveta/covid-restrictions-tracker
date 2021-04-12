@@ -29,7 +29,8 @@ public class Events {
             checkCurrentStatusInside();
         } else if (numberOfEventType == 2) {
             checkCurrentStatusOutside();
-        } else System.out.println("Sorry, the number you entered is out of range. Please, enter correct number!");
+        } else General.wrongNumberMessage();
+        ifToTryOneMoreTime();
     }
 
 
@@ -51,11 +52,29 @@ public class Events {
 
     public static void insideEventsNotAllowed() {
         System.out.println("Sorry, currently events inside are not allowed.");
+        General.thanksForUsing();
+        System.exit(0);
     }
 
     public static void outsideEventsNotAllowed() {
         System.out.println("Sorry, currently events outside are not allowed.");
+        General.thanksForUsing();
+        System.exit(0);
     }
+
+    public static void ifToTryOneMoreTime() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Do you want to check another option? Yes or No?");
+        String tryOneMoreTime = scanner.next();
+        if (tryOneMoreTime.equalsIgnoreCase("yes")) {
+            getPlaceOfEvent();
+            messageToUserAccordingToEventType();
+            General.thanksForUsing();
+            System.exit(0);
+        } else General.thanksForUsing();
+        System.exit(0);
+    }
+
 
     public static void insideEventsAllowed() {
         List<String> activityTypeInside = new ArrayList<>();

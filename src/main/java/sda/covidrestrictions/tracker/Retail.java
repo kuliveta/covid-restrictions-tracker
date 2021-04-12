@@ -39,19 +39,23 @@ public class Retail {
         numberOfProductType = scanner.nextInt();
         if (numberOfProductType == allowedProducts.size()) {
             notAllowedProducts();
-        }
-        if (numberOfProductType > allowedProducts.size()) {
-            wrongNumberEntered();
+        } else if (numberOfProductType > allowedProducts.size() || numberOfProductType == 0) {
+            ifToTryOneMoreTime();
         } else allowedProducts();
     }
 
 
     public static void ifToTryOneMoreTime() {
+        System.out.println("Sorry, number you have entered is out of scope.");
         Scanner scanner = new Scanner(System.in);
         System.out.println("Do you want to check another option? Yes or No?");
         String tryOneMoreTime = scanner.next();
-        if (tryOneMoreTime.equalsIgnoreCase("yes")) restrictionsToRetail();
-        else System.exit(0);
+        if (tryOneMoreTime.equalsIgnoreCase("yes")) {
+            printMessageBasedOnProducts();
+            General.legalDisclaimer();
+            General.thanksForUsing();
+        } else General.thanksForUsing();
+        System.exit(0);
     }
 
     public static void messageToCustomer() {
@@ -61,21 +65,16 @@ public class Retail {
 
     public static void allowedProducts() {
         System.out.println("Retail business selling those products is allowed to operate strictly following " +
-                "\"square meter per person\" guidelines");
+                "\"square meter per person\" guidelines.");
         General.getAllowedNumberOfPeople();
     }
 
-    public static void wrongNumberEntered() {
-        System.out.println("Sorry, number you have entered is out of scope.");
-        ifToTryOneMoreTime();
-        General.legalDisclaimer();
-        General.thanksForUsing();
-
-    }
 
     public static void notAllowedProducts() {
         System.out.println("Sorry, selling of those products in person currently is not allowed.");
+        General.thanksForUsing();
         System.exit(0);
+
     }
 
 
