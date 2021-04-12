@@ -17,7 +17,7 @@ public class Events {
 
 
     private static void getPlaceOfEvent() {
-        System.out.println("Please choose where event will be held.\n For INSIDE type number 1,\n" +
+        System.out.println("Please choose where event will be held.\n for INSIDE type number 1,\n" +
                 " for OUTSIDE type number 2: ");
         Scanner scanner = new Scanner(System.in);
         numberOfEventType = scanner.nextInt();

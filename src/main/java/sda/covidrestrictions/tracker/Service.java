@@ -43,7 +43,7 @@ public class Service {
         serviceListInside.add("Manicure");
         serviceListInside.add("Pedicure");
         serviceListInside.add("Podiatrist");
-        serviceListInside.add("Other services Inside");
+        serviceListInside.add("Other services inside");
         for (int i = 0; i < serviceListInside.size(); i++) {
             System.out.println(( i + 1 ) + " - " + serviceListInside.get(i) + ";");
         }
@@ -58,7 +58,7 @@ public class Service {
             serviceInsideIsNotAllowed();
         }
         if (numberOfInsideService > serviceListInside.size() || numberOfInsideService == 0) {
-            ifToTryOneMoreTimeInside();
+            ifToTryOneMoreTimeInside();General.thanksForUsing();
         } else serviceInsideIsAllowed();
 
 
@@ -72,8 +72,8 @@ public class Service {
     private static void printListOfOutsideServices() {
         System.out.println("Please choose the number of the service - next to the option you choose :");
         Scanner scanner = new Scanner(System.in);
-        serviceListOutside.add("Individual photo-services Outside");
-        serviceListOutside.add("Other services Outside");
+        serviceListOutside.add("Individual photo-services outside");
+        serviceListOutside.add("Other services outside");
 
         for (int i = 0; i < serviceListOutside.size(); i++) {
             System.out.println(( i + 1 ) + " - " + serviceListOutside.get(i) + ";");
